@@ -1,0 +1,103 @@
+ const USER = [{
+    firstName: "Tom",
+    lastName: "Smith",
+    age: 25
+}, {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30
+}, {
+    firstName: "Jane",
+    lastName: "Doe",
+    age: 28
+}, {
+    firstName: "Mary",
+    lastName: "Johnson",
+    age: 35
+}, {
+    firstName: "James",
+    lastName: "Brown",
+    age: 40
+}, {
+    firstName: "Robert",
+    lastName: "Wilson",
+    age: 45
+}, {
+    firstName: "Michael",
+    lastName: "Moore",
+    age: 50
+}, {
+    firstName: "David",
+    lastName: "Taylor",
+    age: 55
+}, {
+    firstName: "Richard",
+    lastName: "Anderson",
+    age: 60
+}, {
+    firstName: "Charles",
+    lastName: "Thomas",
+    age: 65
+}, {
+    firstName: "Joseph",
+    lastName: "Jackson",
+    age: 70
+}, {
+    firstName: "Daniel",
+    lastName: "White",
+    age: 75
+}, {
+    firstName: "Matthew",
+    lastName: "Harris",
+    age: 80
+}, {
+    firstName: "Anthony",
+    lastName: "Martin",
+    age: 85
+}, {
+    firstName: "Donald",
+    lastName: "Thompson",
+    age: 90
+}, {
+    firstName: "Mark",
+    lastName: "Garcia",
+    age: 95
+}, {
+    firstName: "Paul",
+    lastName: "Martinez",
+    age: 100
+}, {
+    firstName: "Steven",
+    lastName: "Robinson",
+    age: 105
+}, {
+    firstName: "Andrew",
+    lastName: "Clark",
+    age: 110
+}, {
+    firstName: "Kenneth",
+    lastName: "Rodriguez",
+    age: 115
+}, {
+    firstName: "Joshua",
+    lastName: "Lewis",
+    age: 120
+}, {
+    firstName: "Kevin",
+    lastName: "Lee",
+    age: 125
+}, {
+    firstName: "Brian",
+    lastName: "Walker",
+    age: 130
+}, {
+    firstName: "Edward",
+    lastName: "Hall",
+    age: 135
+}, {
+    firstName: "Ronald",
+    lastName: "Allen",
+    age: 140
+}]
+
+module.exports = USER;

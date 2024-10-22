@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <script>
+        // JavaScript form validation
+        function validateForm() {
+            var firstName = document.forms["studentForm"]["first_name"].value;
+            var lastName = document.forms["studentForm"]["last_name"].value;
+            var rollNo = document.forms["studentForm"]["roll_no"].value;
+            var password = document.forms["studentForm"]["password"].value;
+            var confirmPassword = document.forms["studentForm"]["confirm_password"].value;
+            var contactNumber = document.forms["studentForm"]["contact_number"].value;
+
+            if (firstName == "" || lastName == "" || rollNo == "" || password == "" || confirmPassword == "" || contactNumber == "") {
+                alert("All fields must be filled out.");
+                return false;
+            }
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            if (isNaN(contactNumber)) {
+                alert("Contact number must be numeric.");
+                return false;
+            }
+            return true;
+        }
+
+        // Validation for update/delete (only Roll No is required)
+        function validateUpdateDelete() {
+            var rollNo = document.forms["studentForm"]["roll_no"].value;
+
+            // if (rollNo == "") {
+            //     alert("Roll No is required for updating or deleting a record.");
+            //     return false;
+            // }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<!-- Form for Insert Operation -->
+<form name="studentForm" action="student_registration.php" method="POST" onsubmit="return validateForm()">
+    <h3>Insert New Student Record</h3>
+    First Name: <input type="text" name="first_name"><br><br>
+    Last Name: <input type="text" name="last_name"><br><br>
+    Roll No: <input type="text" name="roll_no"><br><br>
+    Password: <input type="password" name="password"><br><br>
+    Confirm Password: <input type="password" name="confirm_password"><br><br>
+    Contact Number: <input type="text" name="contact_number"><br><br>
+
+    <button type="submit" name="insert">Insert</button>
+</form>
+
+<br>
+
+<!-- Form for Update and Delete Operations -->
+<form name="studentForm" action="student_registration.php" method="POST" onsubmit="return validateUpdateDelete()">
+    <h3>Update or Delete Existing Student Record</h3>
+    Roll No (for Update/Delete): <input type="text" name="roll_no"><br><br>
+    Contact Number (for Update): <input type="text" name="contact_number"><br><br>
+
+    <button type="submit" name="update">Update</button>
+    <button type="submit" name="delete">Delete</button>
+</form>
+
+<br>
+
+<!-- View All Records -->
+<form name="studentForm" action="student_registration.php" method="POST">
+    <button type="submit" name="view">View All Records</button>
+</form>
+
+</body>
+</html>
